@@ -85,6 +85,11 @@ func main() {
 	mux.HandleFunc("/", showTemperatureByCep)
 	http.ListenAndServe(":8080", mux)
 
+	//TODO:
+	//realizado o deploy no Google Cloud Run.(free tier) e endereço ativo para ser acessado.
+	//Testes automatizados demonstrando o funcionamento.
+	//Utilize docker/docker-compose para que possamos realizar os testes de sua aplicação.
+
 }
 func showTemperatureByCep(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/" {
